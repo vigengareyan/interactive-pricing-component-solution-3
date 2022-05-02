@@ -63,4 +63,18 @@ function react(event) {
 
 if (window.innerWidth < 600) {
   document.querySelector(".month-year span").innerText = "-25%";
+} else {
+  document.querySelector(".month-year span").innerText = "25% discount";
+}
+
+// Make it responsive: https://stackoverflow.com/questions/641857/javascript-window-resize-event
+
+window.addEventListener("resize", discount);
+
+function discount() {
+  if (window.innerWidth < 600) {
+    document.querySelector(".month-year span").innerText = "-25%";
+  } else {
+    document.querySelector(".month-year span").innerText = "25% discount";
+  }
 }
