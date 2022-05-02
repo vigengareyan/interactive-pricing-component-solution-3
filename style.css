@@ -1,0 +1,455 @@
+.wow {
+  width: 100px;
+}
+
+:root {
+  --Soft-Cyan-Full-Slider-Bar: hsl(174, 77%, 80%);
+  --Strong-Cyan-Slider-Backround: hsl(174, 86%, 45%);
+  --Light-Grayish-Red-Discount-Background: hsl(14, 92%, 95%);
+  --Light-Red-Discount-Text: hsl(15, 100%, 70%);
+  --Pale-Blue-CTA-Text: hsl(226, 100%, 87%);
+
+  --White-Pricing-Component-Background: hsl(0, 0%, 100%);
+  --Very-Pale-Blue-Main-Background: hsl(230, 100%, 99%);
+  --Light-Grayish-Blue-Empty-Slider-Bar: hsl(224, 65%, 95%);
+  --Light-Grayish-Blue-Toggle-Background: hsl(223, 50%, 87%);
+  --Grayish-Blue-Text: hsl(225, 20%, 60%);
+  --Dark-Desaturated-Blue-Text-and-CTA-Background: hsl(227, 35%, 25%);
+}
+
+* {
+  /*border: 1px solid black;*/
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+}
+
+html, body {
+  height: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: url("images/bg-pattern.svg");
+  background-color: hsl(230, 100%, 99%);
+  /*https://developer.mozilla.org/ru/docs/Web/CSS/background-size*/
+  /* https://www.w3schools.com/css/tryit.asp?filename=trycss3_background_multiple */
+  background-size: 100% 52%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.container {
+  width: 500px;
+  /*height: 500px;*/
+}
+
+.top {
+  height: 40%;
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-container {
+  margin: 10%;
+  
+  background: url("images/pattern-circles.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* https://www.w3schools.com/cssref/pr_background-position.asp */
+  background-position: center;
+
+  display: flex;
+  direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 5%;
+  padding-bottom: 5%;  
+}
+
+.top-container h1, .top-container h2 {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.top-container h1 {
+  color: hsl(227, 35%, 25%);
+  font-size: 27px;
+  font-weight: 800;
+  /* https://css-tricks.com/forums/topic/css-blurred-text-effect/ */
+  filter:blur(0.1px);
+}
+
+.top-container h2 {
+  color: hsl(225, 20%, 60%);
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.box {
+  height: 60%;
+  color: hsl(225, 20%, 60%);
+  background-color: hsl(224, 65%, 95%);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px hsl(224, 65%, 95%);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-row-gap: 2px;
+}
+
+.box-1, .box-2,.box-3 {
+  padding: 20px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.box-1 {
+
+  /*border: 1px solid black;*/
+  padding-left: 30px;
+  padding-right: 58px;
+  
+  border-radius: 10px 10px 0px 0px;
+  
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 2;
+  
+  display: flex;
+  direction: column;
+  flex-wrap: wrap;
+  /*display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;*/
+}
+
+div[class="1"], div[class="2"] {
+  display: flex;
+  align-items: center;
+}
+
+.pageviews, .pageviews span, .per-month {
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+div[class="2"] {
+  justify-content: right;
+}
+
+.pageviews span {
+  margin-right: 5px;
+}
+
+.per-month {
+  justify-content: right;
+}
+
+.per-month span {
+  font-size: 30px;
+  font-weight: 800;
+  color: hsl(227, 35%, 25%);
+  margin-right: 5px;
+}
+
+/*
+.12 {
+  width: 400px;
+  display: flex;
+  direction: row;
+}
+
+.pageviews, .per-month {
+  width: 40%;
+}
+
+.first {
+  /*grid-row: 1 / span 1;
+  grid-column: 1 / span 1;*/
+  /*
+  display: flex;
+  justify-content: left;
+}
+
+.second {
+  /*grid-row: 1 / span 1;
+  grid-column: 2 / span 1;*/
+  /*
+  display: flex;
+  justify-content: right;
+}
+
+.pageviews, .pageviews span, .per-month {
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageviews {
+  justify-content: left;
+}
+
+.pageviews span {
+  margin-right: 5px;
+}
+
+.per-month {
+  justify-content: right;
+}
+
+.per-month span {
+  font-size: 30px;
+  font-weight: 800;
+  color: hsl(227, 35%, 25%);
+  margin-right: 5px;
+}
+
+.slider {
+  width: 100%;
+  /*grid-row: 2 / span 1;
+  grid-column: 1 / span 2;*//*
+}
+
+/* Slide */
+
+input[id="slide"] {
+  width: 100%;
+  cursor: pointer;
+
+  /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_rangeslider*/
+  appearance: none;
+
+  height: 5px;
+  border: none;
+  border-radius: 2.5px;
+  background: linear-gradient(to right,hsl(174, 77%, 80%) 0%,hsl(174, 77%, 80%) calc(0.5*100%), hsl(224, 65%, 95%) calc(0.5*100%), hsl(224, 65%, 95%) calc(1*100%));
+}
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_rangeslider*/
+input[id="slide"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  
+  background: url("images/icon-slider.svg");
+  /*https://stackoverflow.com/questions/4694191/how-do-i-add-margin-to-just-background-image*/
+  background-origin: content-box;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: hsl(174, 86%, 45%);
+  
+  
+  border-radius: 50%;
+  box-shadow: 0px 10px 15px hsl(174, 77%, 80%);
+}
+
+input[id="slide"]::-webkit-slider-thumb:hover {
+  background-color: hsl(174, 77%, 80%);
+}
+
+/* https://stackoverflow.com/questions/5697067/css-for-grabbing-cursors-drag-drop */
+
+input[id="slide"]::-webkit-slider-thumb:active {
+  background-color: hsl(174, 86%, 45%);
+  cursor: grabbing;
+}
+
+div[class="3"] {
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  width: 100%;
+}
+
+/* Switch */
+.switch {
+  width: 50px;
+  padding: 3px;
+  padding-right: 0px;
+  border-radius: 11px;
+  background-color: hsl(223, 50%, 87%);
+  cursor: pointer;
+  border: none;
+  transform: scale(0.5, 0.4);
+}
+
+.switch:hover {
+  background-color: hsl(174, 77%, 80%);
+}
+
+input[type="submit"] {
+  border-radius: 50%;
+  background-color: white;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+div[class="4"] {
+  display: flex;
+  justify-content: right;
+}
+
+.month-year {
+  display: flex;
+  align-items: center;
+}
+/*
+.last {
+  /*grid-row: 3 / span 1;
+  grid-column: 1 / span 2;*//*
+  display: flex;
+  justify-content: right;
+}
+*/
+.month-year {
+  font-size: 10px;
+}
+
+.month-year span {
+  margin-left: 10px;
+  font-size: 8px;
+  font-weight: 800;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 6px;
+  background-color: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+}
+
+
+.box-1 {
+  padding: 20px 50px 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div[class="1"],div[class="2"],div[class="3"],div[class="4"] {
+  width: 49.3%;
+  /*border: 1px solid black;*/
+}
+
+div[class="3"],div[class="4"] {
+  width: 99%;
+}
+
+div[class="4"] {
+  padding-right: 30px;
+}
+
+.box-2 {
+  border-radius: 0px 0px 0px 10px;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+
+  display: flex;
+  direction: column;
+  flex-wrap: wrap;
+
+  padding-left: 50px;
+}
+
+img[src="images/icon-check.svg"] {
+  margin-right: 5px;
+  transform: scale(0.5,0.5);
+}
+
+.web,.own,.email {
+  height: 12px;
+  width: 100%;
+  padding: 3px;
+  font-size: 10px;
+  filter:blur(0.1px);
+
+  display: flex;
+  align-items: bottom;
+}
+
+.box-3 {
+  border-radius: 0px 0px 10px 0px;
+  
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-3 button {
+  font-size: 10px;
+  height: 30px;
+  width: 130px;
+  border-radius: 15px;
+  border: none;
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(223, 50%, 87%);
+  filter: blur(0.1px);
+  cursor: pointer;
+}
+
+.box-3 button:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .container {
+    width: 350px;
+  }
+  div[class="4"] {
+    padding-right: 0px;
+  }
+  .box {
+    display: flex;
+    direction: column;
+    flex-wrap: wrap;
+    row-gap: 0px;
+  }
+  div[class="1"],div[class="2"],div[class="3"] {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  div[class="3"] {
+    order: -1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  div[class="1"] {
+    order: -1;
+  }
+  .box-2 {
+    margin-top: 2px;
+    border-radius: 0px;
+    padding-right: 50px;
+  }
+  .web,.own,.email {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .box-3 {
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+  }
+}
