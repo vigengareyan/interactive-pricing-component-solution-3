@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [My solution URL here](https://github.com/vigengareyan/interactive-pricing-component-solution-3)
 - Live Site URL: [My live site URL here](https://interactive-pricing-component-solution-3.vigengareyan.repl.co/)
 
 ## My process
